@@ -65,7 +65,7 @@ const Hero = () => {
             <div className="pixel-border bg-accent p-4 md:p-6 w-64 h-64 md:w-80 md:h-80 flex items-center justify-center rounded">
               <div className="relative w-full h-full overflow-hidden">
                 <img 
-                  src="/lovable-uploads/0085edd2-8989-45d8-bf94-330443bad536.png" 
+                  src="/lovable-uploads/profile.jpg" 
                   alt="Mukesh Cheemakurthi" 
                   className="object-cover w-full h-full"
                 />
