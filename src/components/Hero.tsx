@@ -20,10 +20,10 @@ const Hero = () => {
           <div className="space-y-4">
             <p className="font-pixel text-game-green text-sm md:text-base mb-2">HELLO WORLD</p>
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-pixel text-white leading-tight">
-              I'm <span className="text-game-blue">Mukesh</span> 
+              I'm <span className="text-game-blue">Mukesh Cheemakurthi</span> 
               <span className="animate-blink text-game-blue">_</span>
             </h1>
-            <p className="text-xl md:text-2xl font-pixel text-game-yellow mt-2">Software Engineer</p>
+            <p className="text-xl md:text-2xl font-pixel text-game-yellow mt-2">AI & Data Engineer</p>
             <p className="text-lg text-gray-300 mt-6 font-pixelify mb-8">{personalInfo.availability}</p>
           
             <div className="flex flex-col sm:flex-row items-center justify-center md:justify-start gap-4 mt-8">
@@ -69,7 +69,7 @@ const Hero = () => {
                   alt="Mukesh Cheemakurthi" 
                   className="object-cover w-full h-full"
                 />
-                <p className="absolute bottom-0 left-0 right-0 text-sm font-pixel text-game-yellow bg-game-dark-blue/70 py-1 text-center">PLAYER ONE</p>
+                <p className="absolute bottom-0 left-0 right-0 text-sm font-pixel text-game-yellow bg-game-dark-blue/70 py-1 text-center">Player - 303</p>
               </div>
             </div>
             
