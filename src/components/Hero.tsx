@@ -63,11 +63,13 @@ const Hero = () => {
         <div className="order-1 md:order-2 flex justify-center md:justify-end">
           <div className="relative">
             <div className="pixel-border bg-accent p-4 md:p-6 w-64 h-64 md:w-80 md:h-80 flex items-center justify-center rounded">
-              <div className="text-center">
-                <div className="w-48 h-48 md:w-64 md:h-64 bg-game-blue/20 border-4 border-game-blue mb-4 mx-auto flex items-center justify-center">
-                  <span className="font-pixel text-xs md:text-sm text-game-blue">CHARACTER SPRITE</span>
-                </div>
-                <p className="text-sm font-pixel text-game-yellow">PLAYER ONE</p>
+              <div className="relative w-full h-full overflow-hidden">
+                <img 
+                  src="/lovable-uploads/0085edd2-8989-45d8-bf94-330443bad536.png" 
+                  alt="Mukesh Cheemakurthi" 
+                  className="object-cover w-full h-full"
+                />
+                <p className="absolute bottom-0 left-0 right-0 text-sm font-pixel text-game-yellow bg-game-dark-blue/70 py-1 text-center">PLAYER ONE</p>
               </div>
             </div>
             
