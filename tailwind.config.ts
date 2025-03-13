@@ -58,16 +58,21 @@ export default {
 					foreground: 'hsl(var(--card-foreground))'
 				},
 				game: {
-					'dark-blue': '#0f172a',
-					'blue': '#38bdf8',
-					'green': '#4ade80',
-					'red': '#f87171',
-					'yellow': '#facc15',
-					'purple': '#a855f7',
-					'pink': '#ec4899',
-					'cyan': '#22d3ee',
-					'orange': '#fb923c',
-					'lime': '#a3e635',
+					'dark-blue': '#1E88E5',
+					'blue': '#2196F3',
+					'light-blue': '#81D4FA',
+					'green': '#4CAF50',
+					'red': '#F44336',
+					'yellow': '#FFEB3B',
+					'gold': '#FDD835',
+					'brown': '#8B4513',
+					'mushroom-red': '#FF5252',
+					'sky': '#03A9F4',
+					'mario-red': '#E53935',
+					'brick': '#D84315',
+					'question': '#FFD700',
+					'grass': '#66BB6A',
+					'cloud': '#FFFFFF',
 				},
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
@@ -133,6 +138,14 @@ export default {
 					'0%': { opacity: '0', transform: 'scale(0.95)' },
 					'50%': { opacity: '0.5', transform: 'scale(0.97)' },
 					'100%': { opacity: '1', transform: 'scale(1)' }
+				},
+				'coin-flip': {
+					'0%': { transform: 'rotateY(0deg)' },
+					'100%': { transform: 'rotateY(180deg)' }
+				},
+				'question-block': {
+					'0%, 100%': { transform: 'translateY(0)' },
+					'50%': { transform: 'translateY(-10px)' }
 				}
 			},
 			animation: {
@@ -145,7 +158,9 @@ export default {
 				'slide-up': 'slide-up 0.5s ease-out',
 				'slide-down': 'slide-down 0.5s ease-out',
 				'slide-in-right': 'slide-in-right 0.5s ease-out',
-				'pixel-fade-in': 'pixel-fade-in 0.3s ease-out'
+				'pixel-fade-in': 'pixel-fade-in 0.3s ease-out',
+				'coin-flip': 'coin-flip 0.6s ease-in-out infinite',
+				'question-block': 'question-block 1s ease-in-out'
 			}
 		}
 	},

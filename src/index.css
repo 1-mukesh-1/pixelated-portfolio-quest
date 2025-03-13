@@ -49,7 +49,7 @@
   }
 
   html, body {
-    @apply font-pixelify bg-gradient-to-br from-game-dark-blue to-game-purple/90 text-white;
+    @apply font-pixelify bg-gradient-to-br from-[#1E88E5] to-[#81D4FA] text-gray-800;
     image-rendering: pixelated;
     scroll-behavior: smooth;
   }
@@ -61,23 +61,22 @@
 
 @layer components {
   .pixel-border {
-    @apply border-4 border-white relative overflow-hidden;
-    box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.3);
+    @apply relative overflow-hidden;
   }
 
   .pixel-button {
-    @apply px-6 py-2 font-pixel text-sm relative border-4 border-white bg-game-blue text-white 
+    @apply px-6 py-2 font-pixel text-sm relative border-4 border-[#FDD835] bg-[#4CAF50] text-white 
            transition-all duration-200 shadow-[4px_4px_0px_0px_rgba(0,0,0,0.8)] 
            hover:shadow-[2px_2px_0px_0px_rgba(0,0,0,0.8)] hover:translate-x-[2px] hover:translate-y-[2px] transform hover:scale-105;
   }
 
   .pixel-card {
-    @apply bg-gradient-to-br from-accent/80 to-accent/60 border-4 border-white p-5 shadow-[8px_8px_0px_0px_rgba(0,0,0,0.4)] 
-           hover:shadow-[6px_6px_0px_0px_rgba(0,0,0,0.4)] transition-all duration-300 hover:-translate-y-1;
+    @apply bg-white border-4 border-[#2196F3] p-5 shadow-[8px_8px_0px_0px_rgba(33,150,243,0.4)] 
+           hover:shadow-[6px_6px_0px_0px_rgba(33,150,243,0.4)] transition-all duration-300 hover:-translate-y-1;
   }
 
   .pixel-progress-bar {
-    @apply h-6 bg-muted/60 border-2 border-white overflow-hidden;
+    @apply h-6 bg-[#E3F2FD] border-2 border-[#2196F3] overflow-hidden;
   }
 
   .pixel-progress-fill {
@@ -86,20 +85,20 @@
 
   .navigation-item {
     @apply transition-all duration-200 inline-block px-4 py-2 border-b-4 border-transparent 
-           hover:border-game-pink text-lg;
+           hover:border-[#4CAF50] text-lg;
   }
 
   .navigation-item.active {
-    @apply border-game-pink;
+    @apply border-[#4CAF50];
   }
 
   .section-title {
-    @apply text-xl md:text-2xl mb-6 text-game-yellow font-pixel inline-block relative text-shadow;
+    @apply text-xl md:text-2xl mb-6 text-[#FF9800] font-pixel inline-block relative text-shadow;
   }
 
   .section-title::after {
     content: "";
-    @apply absolute left-0 -bottom-2 w-full h-1 bg-game-yellow;
+    @apply absolute left-0 -bottom-2 w-full h-1 bg-[#FF9800];
   }
 
   .pixel-icon {
@@ -115,8 +114,20 @@
   }
   
   .pixelated-grid {
-    background-image: radial-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px);
-    background-size: 24px 24px;
+    background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%234CAF50' fill-opacity='0.2'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  }
+
+  .mario-block {
+    @apply relative inline-block w-10 h-10 bg-[#FFD700] border-2 border-[#8B4513] shadow-md;
+  }
+  
+  .mario-block::before {
+    content: '?';
+    @apply absolute inset-0 flex items-center justify-center text-[#8B4513] font-pixel text-xl;
+  }
+  
+  .mario-block:hover {
+    animation: mario-block-bump 0.3s ease-out;
   }
 }
 
@@ -159,20 +170,58 @@
   animation: pixel-fade-in 0.3s ease forwards;
 }
 
+/* Added animations for Super Mario theme */
+@keyframes mario-jump {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+}
+
+@keyframes mario-run {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(20px); }
+}
+
+@keyframes mario-block-bump {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes mario-coin-spin {
+  0% { transform: scaleX(1); }
+  50% { transform: scaleX(0.1); }
+  100% { transform: scaleX(1); }
+}
+
+.mario-jump {
+  animation: mario-jump 0.5s ease-in-out;
+}
+
+.mario-run {
+  animation: mario-run 0.3s infinite alternate;
+}
+
+.mario-coin-spin {
+  animation: mario-coin-spin 1s infinite;
+}
+
+.cloud-float {
+  animation: float 15s infinite alternate ease-in-out;
+}
+
 /* Scrollbar Styling */
 ::-webkit-scrollbar {
   width: 10px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #0f172a;
+  background: #E3F2FD;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #ec4899;
-  border: 2px solid #0f172a;
+  background: #2196F3;
+  border: 2px solid #E3F2FD;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #4ade80;
+  background: #4CAF50;
 }
