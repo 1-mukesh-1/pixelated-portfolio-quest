@@ -67,12 +67,20 @@ export default {
 					'gold': '#FDD835',
 					'brown': '#8B4513',
 					'mushroom-red': '#FF5252',
-					'sky': '#03A9F4',
+					'sky': '#7EC0EE',       // Classic Mario sky color
 					'mario-red': '#E53935',
-					'brick': '#D84315',
-					'question': '#FFD700',
-					'grass': '#66BB6A',
+					'brick': '#C65D31',     // Better brick color
+					'question': '#FFD700',  // Question block gold color
+					'grass': '#77DD77',     // Brighter grass
 					'cloud': '#FFFFFF',
+					'pipe-green': '#2E8B57',
+					'toad-blue': '#1C58D9', 
+					'toad-red': '#FF0000',
+					'goomba-brown': '#A0522D',
+					'koopa-green': '#56A035',
+					'peach-pink': '#FFB7C5', // Princess Peach color
+					'wario-purple': '#7B68EE',
+					'super-star': '#FFD700'
 				},
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
@@ -146,6 +154,18 @@ export default {
 				'question-block': {
 					'0%, 100%': { transform: 'translateY(0)' },
 					'50%': { transform: 'translateY(-10px)' }
+				},
+				'bob-vertical': {
+					'0%, 100%': { transform: 'translateY(0)' },
+					'50%': { transform: 'translateY(-15px) scale(1.05)' }
+				},
+				'pipe-appear': {
+					'0%': { transform: 'translateY(100%)' },
+					'100%': { transform: 'translateY(0)' }
+				},
+				'mushroom-grow': {
+					'0%': { transform: 'scale(0)' },
+					'100%': { transform: 'scale(1)' }
 				}
 			},
 			animation: {
@@ -160,7 +180,10 @@ export default {
 				'slide-in-right': 'slide-in-right 0.5s ease-out',
 				'pixel-fade-in': 'pixel-fade-in 0.3s ease-out',
 				'coin-flip': 'coin-flip 0.6s ease-in-out infinite',
-				'question-block': 'question-block 1s ease-in-out'
+				'question-block': 'question-block 1s ease-in-out',
+				'bob-vertical': 'bob-vertical 2s ease-in-out infinite',
+				'pipe-appear': 'pipe-appear 1s ease-out',
+				'mushroom-grow': 'mushroom-grow 0.5s ease-out'
 			}
 		}
 	},
