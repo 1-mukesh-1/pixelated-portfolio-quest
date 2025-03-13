@@ -1,6 +1,5 @@
 
 import { useState, useEffect } from 'react';
-import { personalInfo } from '@/data/portfolioData';
 
 const Header = () => {
   const [activeSection, setActiveSection] = useState('hero');
@@ -38,10 +37,10 @@ const Header = () => {
   };
 
   return (
-    <header className="fixed w-full top-0 z-50 backdrop-blur-sm bg-game-dark-blue/90 border-b-4 border-game-blue py-4 px-6">
+    <header className="fixed w-full top-0 z-50 backdrop-blur-sm bg-game-sky border-b-4 border-game-green py-4 px-6">
       <div className="max-w-6xl mx-auto flex justify-between items-center">
         <div className="flex items-center">
-          <h1 className="text-lg sm:text-xl font-pixel text-game-blue">
+          <h1 className="text-lg sm:text-xl font-pixel text-game-dark-blue">
             <span className="animate-blink">_</span>
             Portfolio
           </h1>
@@ -49,7 +48,7 @@ const Header = () => {
 
         {/* Mobile menu button */}
         <button 
-          className="md:hidden text-white"
+          className="md:hidden text-game-dark-blue"
           onClick={() => setMenuOpen(!menuOpen)}
         >
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="square" strokeLinejoin="miter">
@@ -79,7 +78,7 @@ const Header = () => {
 
         {/* Mobile Navigation Overlay */}
         {menuOpen && (
-          <div className="fixed inset-0 top-16 bg-game-dark-blue/95 z-40 md:hidden">
+          <div className="fixed inset-0 top-16 bg-game-sky/95 z-40 md:hidden">
             <nav className="h-full flex items-center justify-center">
               <ul className="flex flex-col space-y-8 items-center">
                 {['hero', 'about', 'skills', 'projects', 'contact'].map((section) => (
