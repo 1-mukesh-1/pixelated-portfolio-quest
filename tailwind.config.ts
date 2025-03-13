@@ -65,6 +65,9 @@ export default {
 					'yellow': '#facc15',
 					'purple': '#a855f7',
 					'pink': '#ec4899',
+					'cyan': '#22d3ee',
+					'orange': '#fb923c',
+					'lime': '#a3e635',
 				},
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
@@ -97,7 +100,7 @@ export default {
 				},
 				float: {
 					'0%, 100%': { transform: 'translateY(0)' },
-					'50%': { transform: 'translateY(-5px)' }
+					'50%': { transform: 'translateY(-10px)' }
 				},
 				pulse: {
 					'0%, 100%': { opacity: '1' },
@@ -115,11 +118,11 @@ export default {
 					'100%': { transform: 'rotate(360deg)' }
 				},
 				'slide-up': {
-					'0%': { transform: 'translateY(10px)', opacity: '0' },
+					'0%': { transform: 'translateY(20px)', opacity: '0' },
 					'100%': { transform: 'translateY(0)', opacity: '1' }
 				},
 				'slide-down': {
-					'0%': { transform: 'translateY(-10px)', opacity: '0' },
+					'0%': { transform: 'translateY(-20px)', opacity: '0' },
 					'100%': { transform: 'translateY(0)', opacity: '1' }
 				},
 				'slide-in-right': {
@@ -139,9 +142,9 @@ export default {
 				'float': 'float 3s ease-in-out infinite',
 				'pulse': 'pulse 2s ease-in-out infinite',
 				'pixel-spin': 'pixel-spin 1s steps(8) infinite',
-				'slide-up': 'slide-up 0.3s ease-out',
-				'slide-down': 'slide-down 0.3s ease-out',
-				'slide-in-right': 'slide-in-right 0.3s ease-out',
+				'slide-up': 'slide-up 0.5s ease-out',
+				'slide-down': 'slide-down 0.5s ease-out',
+				'slide-in-right': 'slide-in-right 0.5s ease-out',
 				'pixel-fade-in': 'pixel-fade-in 0.3s ease-out'
 			}
 		}

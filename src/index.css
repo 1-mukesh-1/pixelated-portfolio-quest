@@ -49,7 +49,7 @@
   }
 
   html, body {
-    @apply font-pixelify bg-game-dark-blue text-white;
+    @apply font-pixelify bg-gradient-to-br from-game-dark-blue to-game-purple/90 text-white;
     image-rendering: pixelated;
     scroll-behavior: smooth;
   }
@@ -67,12 +67,13 @@
 
   .pixel-button {
     @apply px-6 py-2 font-pixel text-sm relative border-4 border-white bg-game-blue text-white 
-           transition-all duration-100 shadow-[4px_4px_0px_0px_rgba(0,0,0,0.8)] 
-           hover:shadow-[2px_2px_0px_0px_rgba(0,0,0,0.8)] hover:translate-x-[2px] hover:translate-y-[2px];
+           transition-all duration-200 shadow-[4px_4px_0px_0px_rgba(0,0,0,0.8)] 
+           hover:shadow-[2px_2px_0px_0px_rgba(0,0,0,0.8)] hover:translate-x-[2px] hover:translate-y-[2px] transform hover:scale-105;
   }
 
   .pixel-card {
-    @apply bg-accent/80 border-4 border-white p-5 shadow-[8px_8px_0px_0px_rgba(0,0,0,0.4)];
+    @apply bg-gradient-to-br from-accent/80 to-accent/60 border-4 border-white p-5 shadow-[8px_8px_0px_0px_rgba(0,0,0,0.4)] 
+           hover:shadow-[6px_6px_0px_0px_rgba(0,0,0,0.4)] transition-all duration-300 hover:-translate-y-1;
   }
 
   .pixel-progress-bar {
@@ -85,15 +86,15 @@
 
   .navigation-item {
     @apply transition-all duration-200 inline-block px-4 py-2 border-b-4 border-transparent 
-           hover:border-game-blue text-lg;
+           hover:border-game-pink text-lg;
   }
 
   .navigation-item.active {
-    @apply border-game-blue;
+    @apply border-game-pink;
   }
 
   .section-title {
-    @apply text-xl md:text-2xl mb-6 text-game-yellow font-pixel inline-block relative;
+    @apply text-xl md:text-2xl mb-6 text-game-yellow font-pixel inline-block relative text-shadow;
   }
 
   .section-title::after {
@@ -106,7 +107,16 @@
   }
 
   .section-container {
-    @apply max-w-6xl mx-auto px-4 sm:px-6 py-16 overflow-hidden;
+    @apply max-w-6xl mx-auto px-4 sm:px-6 py-16 overflow-hidden relative;
+  }
+  
+  .text-shadow {
+    text-shadow: 2px 2px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000;
+  }
+  
+  .pixelated-grid {
+    background-image: radial-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+    background-size: 24px 24px;
   }
 }
 
@@ -121,6 +131,26 @@
 
   .image-pixelate {
     image-rendering: pixelated;
+  }
+  
+  .hover-bounce {
+    @apply transition-transform hover:animate-bounce;
+  }
+  
+  .animation-delay-500 {
+    animation-delay: 500ms;
+  }
+  
+  .animation-delay-1000 {
+    animation-delay: 1000ms;
+  }
+  
+  .animation-delay-1500 {
+    animation-delay: 1500ms;
+  }
+  
+  .animation-delay-2000 {
+    animation-delay: 2000ms;
   }
 }
 
@@ -139,7 +169,7 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #38bdf8;
+  background: #ec4899;
   border: 2px solid #0f172a;
 }
 
