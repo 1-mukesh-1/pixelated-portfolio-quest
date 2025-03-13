@@ -67,7 +67,7 @@ export default {
 					'gold': '#FDD835',
 					'brown': '#8B4513',
 					'mushroom-red': '#FF5252',
-					'sky': '#7EC0EE',       // Classic Mario sky color
+					'sky': '#87CEEB',       // Brighter classic Mario sky color
 					'mario-red': '#E53935',
 					'brick': '#C65D31',     // Better brick color
 					'question': '#FFD700',  // Question block gold color
@@ -80,7 +80,13 @@ export default {
 					'koopa-green': '#56A035',
 					'peach-pink': '#FFB7C5', // Princess Peach color
 					'wario-purple': '#7B68EE',
-					'super-star': '#FFD700'
+					'super-star': '#FFD700',
+					'luigi-green': '#3CB371',
+					'bowser-yellow': '#FFA500',
+					'bullet-bill-black': '#333333',
+					'lakitu-cloud': '#FFFFFF',
+					'lava-red': '#FF4500',
+					'water-blue': '#1E90FF'
 				},
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
@@ -166,6 +172,25 @@ export default {
 				'mushroom-grow': {
 					'0%': { transform: 'scale(0)' },
 					'100%': { transform: 'scale(1)' }
+				},
+				'block-hit': {
+					'0%, 100%': { transform: 'translateY(0)' },
+					'25%': { transform: 'translateY(-10px) rotate(-3deg)' },
+					'50%': { transform: 'translateY(0) rotate(0deg)' },
+					'75%': { transform: 'translateY(-5px) rotate(3deg)' }
+				},
+				'star-power': {
+					'0%': { transform: 'scale(1)', filter: 'hue-rotate(0deg)' },
+					'25%': { transform: 'scale(1.1)', filter: 'hue-rotate(90deg)' },
+					'50%': { transform: 'scale(1)', filter: 'hue-rotate(180deg)' },
+					'75%': { transform: 'scale(1.1)', filter: 'hue-rotate(270deg)' },
+					'100%': { transform: 'scale(1)', filter: 'hue-rotate(360deg)' }
+				},
+				'lakitu-float': {
+					'0%, 100%': { transform: 'translateX(0) translateY(0)' },
+					'25%': { transform: 'translateX(10px) translateY(-5px)' },
+					'50%': { transform: 'translateX(20px) translateY(0)' },
+					'75%': { transform: 'translateX(10px) translateY(5px)' }
 				}
 			},
 			animation: {
@@ -183,7 +208,10 @@ export default {
 				'question-block': 'question-block 1s ease-in-out',
 				'bob-vertical': 'bob-vertical 2s ease-in-out infinite',
 				'pipe-appear': 'pipe-appear 1s ease-out',
-				'mushroom-grow': 'mushroom-grow 0.5s ease-out'
+				'mushroom-grow': 'mushroom-grow 0.5s ease-out',
+				'block-hit': 'block-hit 0.5s ease-in-out',
+				'star-power': 'star-power 3s linear infinite',
+				'lakitu-float': 'lakitu-float 6s ease-in-out infinite'
 			}
 		}
 	},

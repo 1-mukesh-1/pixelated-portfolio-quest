@@ -43,7 +43,7 @@ const Header = () => {
         <div className="flex items-center">
           <h1 className="text-lg sm:text-xl font-pixel text-game-blue">
             <span className="animate-blink">_</span>
-            {personalInfo.name.split(' ')[0]}
+            Portfolio
           </h1>
         </div>
 

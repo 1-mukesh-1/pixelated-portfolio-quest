@@ -1,3 +1,4 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400;500;600;700&display=swap');
 
@@ -51,6 +52,7 @@
     @apply font-pixelify bg-game-sky text-gray-900;
     image-rendering: pixelated;
     scroll-behavior: smooth;
+    cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' style='fill:black;'><circle cx='8' cy='8' r='5'/></svg>") 8 8, auto;
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -67,6 +69,7 @@
     @apply px-6 py-2 font-pixel text-sm relative border-4 border-game-gold bg-game-red text-white 
            transition-all duration-200 shadow-[4px_4px_0px_0px_rgba(0,0,0,0.8)] 
            hover:shadow-[2px_2px_0px_0px_rgba(0,0,0,0.8)] hover:translate-x-[2px] hover:translate-y-[2px] transform hover:scale-105;
+    cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='32' height='32' style='fill:red;'><polygon points='16,0 32,16 16,32 0,16'/></svg>") 16 16, pointer;
   }
 
   .pixel-card {
@@ -126,7 +129,7 @@
   }
   
   .mario-pipe {
-    @apply relative bg-game-green border-t-4 border-l-4 border-green-300 border-r-4 border-b-4 border-green-900;
+    @apply relative bg-game-pipe-green border-t-4 border-l-4 border-green-300 border-r-4 border-b-4 border-green-900;
   }
 
   .mario-brick {
@@ -223,6 +226,11 @@
   0%, 100% { transform: translateY(0) rotate(0deg); }
   25% { transform: translateY(-5px) rotate(3deg); }
   75% { transform: translateY(5px) rotate(-3deg); }
+}
+
+@keyframes skill-fill {
+  from { width: 0%; }
+  to { width: var(--skill-level, 100%); }
 }
 
 .mario-jump {
