@@ -57,14 +57,14 @@ const Skills = () => {
 
   return (
     <section id="skills" className="section-container relative overflow-hidden">
-      <h2 className="section-title relative z-20">Skills</h2>
+      <h2 className="section-title">Skills</h2>
       
-      {/* Mario elements decoration - moved below the heading */}
-      <div className="absolute top-32 left-5 z-0">
+      {/* Mario elements decoration */}
+      <div className="absolute top-20 left-5 z-0">
         <div className="w-10 h-10 mario-brick animate-bob-vertical"></div>
       </div>
       
-      <div className="absolute top-60 right-5 z-0">
+      <div className="absolute top-40 right-5 z-0">
         <div className="w-10 h-10 mario-brick animate-bob-vertical animation-delay-1000"></div>
       </div>
       
@@ -89,7 +89,7 @@ const Skills = () => {
           >
             <div className="flex justify-between items-center mb-2 text-game-dark-blue">
               <h3 className="font-pixel text-sm">{skill.name}</h3>
-              <span className="text-xs font-pixelify">{skill.level}%</span>
+              <span className="text-xs font-pixel">{skill.level}%</span>
             </div>
             
             <div className="pixel-progress-bar">
@@ -117,16 +117,6 @@ const Skills = () => {
       
       <div className="absolute bottom-20 right-1/4 animate-coin-flip animation-delay-500 z-0">
         <div className="w-6 h-6 mario-coin">$</div>
-      </div>
-      
-      {/* Add super mario power-up animation */}
-      <div className="absolute right-1/3 top-1/2 z-0 animate-mushroom-grow animation-delay-1500">
-        <div className="w-12 h-12 bg-game-mushroom-red rounded-full relative">
-          <div className="absolute inset-2 bg-white rounded-full">
-            <div className="absolute inset-2 bg-game-mushroom-red rounded-full"></div>
-          </div>
-          <div className="absolute -bottom-4 left-3 right-3 h-6 bg-white"></div>
-        </div>
       </div>
     </section>
   );

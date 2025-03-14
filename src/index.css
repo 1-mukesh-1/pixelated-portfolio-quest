@@ -53,24 +53,10 @@
     image-rendering: pixelated;
     scroll-behavior: smooth;
     cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' style='fill:black;'><circle cx='8' cy='8' r='5'/></svg>") 8 8, auto;
-    /* Remove scrollbar */
-    scrollbar-width: none;
-    -ms-overflow-style: none;
-  }
-  
-  /* Remove scrollbar for Webkit browsers */
-  ::-webkit-scrollbar {
-    display: none;
   }
 
   h1, h2, h3, h4, h5, h6 {
     @apply font-pixel;
-  }
-  
-  /* Fix font for numbers */
-  .font-pixelify {
-    font-variant-numeric: lining-nums;
-    font-feature-settings: "tnum" on, "lnum" on;
   }
 }
 
@@ -156,30 +142,6 @@
 
   .mario-ground {
     @apply bg-game-grass border-t-4 border-green-400;
-  }
-  
-  /* New Mario themed elements */
-  .mario-question-block {
-    @apply relative bg-game-question border-t-2 border-l-2 border-yellow-200 border-r-2 border-b-2 border-yellow-700;
-  }
-  
-  .goombas {
-    @apply relative w-12 h-12;
-    background: linear-gradient(to bottom, #A0522D 60%, #8B4513 40%);
-    border-radius: 50% 50% 0 0;
-  }
-  
-  .goombas:before, .goombas:after {
-    content: '';
-    @apply absolute top-1/4 w-3 h-3 bg-white rounded-full;
-  }
-  
-  .goombas:before {
-    left: 20%;
-  }
-  
-  .goombas:after {
-    right: 20%;
   }
 }
 
@@ -271,38 +233,6 @@
   to { width: var(--skill-level, 100%); }
 }
 
-/* New quirky animations */
-@keyframes piranha-plant {
-  0%, 100% { transform: translateY(0); }
-  25% { transform: translateY(-20px); }
-  30% { transform: translateY(-20px); }
-  55% { transform: translateY(0); }
-}
-
-@keyframes koopa-walk {
-  0% { transform: translateX(0) rotateY(0deg); }
-  49% { transform: translateX(20px) rotateY(0deg); }
-  50% { transform: translateX(20px) rotateY(180deg); }
-  99% { transform: translateX(0) rotateY(180deg); }
-  100% { transform: translateX(0) rotateY(0deg); }
-}
-
-@keyframes star-power {
-  0% { filter: hue-rotate(0deg); transform: scale(1); }
-  25% { filter: hue-rotate(90deg); transform: scale(1.1); }
-  50% { filter: hue-rotate(180deg); transform: scale(1); }
-  75% { filter: hue-rotate(270deg); transform: scale(1.1); }
-  100% { filter: hue-rotate(360deg); transform: scale(1); }
-}
-
-@keyframes fire-flower {
-  0% { background-color: red; }
-  25% { background-color: orange; }
-  50% { background-color: yellow; }
-  75% { background-color: white; }
-  100% { background-color: red; }
-}
-
 .mario-jump {
   animation: mario-jump 0.5s ease-in-out;
 }
@@ -338,47 +268,20 @@
   animation: float 15s infinite alternate ease-in-out;
 }
 
-.piranha-plant {
-  animation: piranha-plant 5s infinite ease-in-out;
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 10px;
 }
 
-.koopa-walk {
-  animation: koopa-walk 4s infinite linear;
+::-webkit-scrollbar-track {
+  background: #E3F2FD;
 }
 
-.star-power {
-  animation: star-power 2s infinite linear;
+::-webkit-scrollbar-thumb {
+  background: #2196F3;
+  border: 2px solid #E3F2FD;
 }
 
-.fire-flower {
-  animation: fire-flower 1s infinite linear;
-}
-
-/* Add these new animations */
-.animate-bob-vertical {
-  animation: bob-vertical 2s ease-in-out infinite;
-}
-
-.animate-coin-flip {
-  animation: coin-flip 0.6s ease-in-out infinite;
-}
-
-.animate-mushroom-grow {
-  animation: mushroom-grow 0.5s ease-out;
-}
-
-.animate-block-hit {
-  animation: block-hit 0.5s ease-in-out;
-}
-
-.animate-star-power {
-  animation: star-power 3s linear infinite;
-}
-
-.animate-pipe-appear {
-  animation: pipe-appear 1s ease-out;
-}
-
-.animate-lakitu-float {
-  animation: lakitu-float 6s ease-in-out infinite;
+::-webkit-scrollbar-thumb:hover {
+  background: #4CAF50;
 }

@@ -6,7 +6,7 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
   
   return (
-    <footer className="bg-game-sky border-t-4 border-game-green py-6">
+    <footer className="bg-accent/40 border-t-4 border-white py-6">
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
         <div className="text-center">
           <div className="flex justify-center space-x-6 mb-4">
@@ -16,7 +16,7 @@ const Footer = () => {
                 href={link.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-game-dark-blue hover:text-game-blue transition-colors"
+                className="text-white hover:text-game-blue transition-colors"
                 aria-label={link.name}
               >
                 {link.icon === 'github' ? (
@@ -28,10 +28,10 @@ const Footer = () => {
             ))}
           </div>
           
-          <p className="text-sm font-pixel mb-1 text-game-dark-blue">
+          <p className="text-sm font-pixel mb-1">
             &copy; {currentYear} {personalInfo.name}
           </p>
-          <p className="text-xs text-game-dark-blue">
+          <p className="text-xs text-gray-400">
             All Rights Reserved
           </p>
         </div>
