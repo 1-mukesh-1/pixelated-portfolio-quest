@@ -24,66 +24,22 @@ const MainLayout: React.FC<MainLayoutProps> = ({ children }) => {
       observer.observe(section);
     });
 
-    // Add scroll animations - Mario elements appearing on scroll
+    // Removed the distracting side-to-side animations when scrolling
+    // Simple mario sound effects on specific scroll percentages are kept
     const handleScroll = () => {
       const scrollY = window.scrollY;
       const height = document.body.offsetHeight - window.innerHeight;
       const scrolled = (scrollY / height) * 100;
       
-      // Add Mario sounds on specific scroll percentages
+      // Trigger effects only on specific scroll percentages
       if (scrolled > 25 && scrolled < 26) {
-        spawnMarioElement('coin');
+        console.log("25% scrolled");
+        // Optional: Play a subtle sound effect here
       } else if (scrolled > 50 && scrolled < 51) {
-        spawnMarioElement('mushroom');
+        console.log("50% scrolled");
       } else if (scrolled > 75 && scrolled < 76) {
-        spawnMarioElement('star');
+        console.log("75% scrolled");
       }
-    };
-
-    const spawnMarioElement = (type: string) => {
-      const element = document.createElement('div');
-      element.className = `fixed z-50 transition-all duration-1000`;
-      
-      // Set different elements based on type
-      if (type === 'coin') {
-        element.className += ' w-8 h-8 mario-coin animate-coin-flip';
-        element.textContent = '$';
-      } else if (type === 'mushroom') {
-        element.className += ' w-10 h-10 bg-game-mushroom-red rounded-full';
-        const inner = document.createElement('div');
-        inner.className = 'absolute top-1 left-1 right-1 bottom-1 bg-white rounded-full flex items-center justify-center';
-        const dot = document.createElement('div');
-        dot.className = 'w-4 h-4 bg-game-mushroom-red rounded-full';
-        inner.appendChild(dot);
-        element.appendChild(inner);
-        
-        const stem = document.createElement('div');
-        stem.className = 'absolute -bottom-4 left-1 right-1 h-4 bg-game-dark-blue';
-        element.appendChild(stem);
-      } else if (type === 'star') {
-        element.innerHTML = `<svg width="30" height="30" viewBox="0 0 24 24" fill="gold" stroke="gold">
-          <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
-        </svg>`;
-        element.className += ' animate-float';
-      }
-      
-      // Position randomly on the right side
-      const topPos = Math.random() * (window.innerHeight - 100);
-      element.style.top = `${topPos}px`;
-      element.style.right = '0px';
-      
-      // Add to body and animate
-      document.body.appendChild(element);
-      
-      // Animate to the left
-      setTimeout(() => {
-        element.style.right = `${window.innerWidth + 50}px`;
-      }, 100);
-      
-      // Remove after animation
-      setTimeout(() => {
-        document.body.removeChild(element);
-      }, 3000);
     };
 
     window.addEventListener('scroll', handleScroll);

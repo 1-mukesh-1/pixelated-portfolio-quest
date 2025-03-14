@@ -38,10 +38,10 @@ const Header = () => {
   };
 
   return (
-    <header className="fixed w-full top-0 z-50 backdrop-blur-sm bg-game-dark-blue/90 border-b-4 border-game-blue py-4 px-6">
+    <header className="fixed w-full top-0 z-50 backdrop-blur-sm bg-game-brick/90 border-b-4 border-game-mushroom-red py-4 px-6">
       <div className="max-w-6xl mx-auto flex justify-between items-center">
         <div className="flex items-center">
-          <h1 className="text-lg sm:text-xl font-pixel text-game-blue">
+          <h1 className="text-lg sm:text-xl font-pixel text-white">
             <span className="animate-blink">_</span>
             Portfolio
           </h1>
@@ -68,7 +68,7 @@ const Header = () => {
               <li key={section}>
                 <button
                   onClick={() => scrollToSection(section)}
-                  className={`navigation-item ${activeSection === section ? 'active' : ''}`}
+                  className={`navigation-item text-white ${activeSection === section ? 'active' : ''}`}
                 >
                   {section.charAt(0).toUpperCase() + section.slice(1)}
                 </button>
@@ -79,14 +79,14 @@ const Header = () => {
 
         {/* Mobile Navigation Overlay */}
         {menuOpen && (
-          <div className="fixed inset-0 top-16 bg-game-dark-blue/95 z-40 md:hidden">
+          <div className="fixed inset-0 top-16 bg-game-brick/95 z-40 md:hidden">
             <nav className="h-full flex items-center justify-center">
               <ul className="flex flex-col space-y-8 items-center">
                 {['hero', 'about', 'skills', 'projects', 'contact'].map((section) => (
                   <li key={section} className="w-full text-center">
                     <button
                       onClick={() => scrollToSection(section)}
-                      className="navigation-item text-xl w-full"
+                      className="navigation-item text-xl w-full text-white"
                     >
                       {section.charAt(0).toUpperCase() + section.slice(1)}
                     </button>

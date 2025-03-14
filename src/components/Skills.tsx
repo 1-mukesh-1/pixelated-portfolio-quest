@@ -18,8 +18,8 @@ const SkillCategoryButton = ({
     onClick={onClick}
     className={`px-4 py-2 border-2 transition-all duration-100 font-pixel text-xs sm:text-sm flex items-center justify-center ${
       active 
-        ? 'bg-game-blue text-white border-white shadow-[2px_2px_0px_0px_rgba(0,0,0,0.8)]' 
-        : 'bg-transparent text-game-dark-blue border-game-dark-blue/40 hover:border-game-dark-blue shadow-[4px_4px_0px_0px_rgba(0,0,0,0.8)]'
+        ? 'bg-game-brick text-white border-white shadow-[2px_2px_0px_0px_rgba(0,0,0,0.8)]' 
+        : 'bg-white text-game-dark-blue border-game-dark-blue shadow-[4px_4px_0px_0px_rgba(0,0,0,0.8)]'
     }`}
   >
     {icon}
@@ -57,14 +57,16 @@ const Skills = () => {
 
   return (
     <section id="skills" className="section-container relative overflow-hidden">
-      <h2 className="section-title">Skills</h2>
+      <div className="relative z-10">
+        <h2 className="section-title mb-12">Skills</h2>
+      </div>
       
-      {/* Mario elements decoration */}
-      <div className="absolute top-20 left-5 z-0">
+      {/* Mario elements decoration - moved down to not cover heading */}
+      <div className="absolute top-40 left-5 z-0">
         <div className="w-10 h-10 mario-brick animate-bob-vertical"></div>
       </div>
       
-      <div className="absolute top-40 right-5 z-0">
+      <div className="absolute top-60 right-5 z-0">
         <div className="w-10 h-10 mario-brick animate-bob-vertical animation-delay-1000"></div>
       </div>
       

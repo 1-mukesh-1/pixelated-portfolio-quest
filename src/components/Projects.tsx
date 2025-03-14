@@ -34,7 +34,7 @@ const Projects = () => {
               {project.technologies.map((tech, techIndex) => (
                 <span 
                   key={techIndex} 
-                  className="inline-block px-2 py-1 bg-game-yellow/30 border-2 border-game-dark-blue text-xs font-pixel text-game-dark-blue"
+                  className="inline-block px-2 py-1 bg-game-dark-blue/80 border-2 border-game-blue text-xs font-pixel text-white"
                 >
                   {tech}
                 </span>
@@ -42,7 +42,7 @@ const Projects = () => {
             </div>
             
             <div className="mt-4 text-game-dark-blue">
-              <h4 className="font-pixel text-sm text-game-yellow mb-2">HIGHLIGHTS:</h4>
+              <h4 className="font-pixel text-sm text-game-blue mb-2">HIGHLIGHTS:</h4>
               <ul className="list-disc list-inside text-sm">
                 {project.highlights.map((highlight, hIndex) => (
                   <li key={hIndex} className="mb-2">{highlight}</li>

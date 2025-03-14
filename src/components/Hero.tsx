@@ -90,14 +90,18 @@ const Hero = () => {
               <Gamepad className="inline-block mr-2" size={16} />
               PLAYER ONE READY
             </p>
-            <h1 className="text-3xl md:text-4xl lg:text-5xl font-pixel text-game-brown leading-tight text-shadow">
-              I'm <span className="text-game-red text-glow">Mukesh Cheemakurthi</span> 
-              <span className="animate-blink text-game-red">_</span>
-            </h1>
-            <p className="text-xl md:text-2xl font-pixel text-game-green mt-2 text-shadow">AI & Data Engineer</p>
-            <p className="text-lg text-gray-800 mt-6 font-pixelify mb-8 bg-white/80 p-4 rounded-md shadow-inner border-2 border-game-blue">
-              {personalInfo.availability}
-            </p>
+            
+            {/* Added a solid background box for better readability */}
+            <div className="bg-white/85 p-6 border-4 border-game-brick shadow-lg">
+              <h1 className="text-3xl md:text-4xl lg:text-5xl font-pixel text-game-brown leading-tight">
+                I'm <span className="text-game-red">Mukesh Cheemakurthi</span> 
+                <span className="animate-blink text-game-red">_</span>
+              </h1>
+              <p className="text-xl md:text-2xl font-pixel text-game-green mt-2">AI & Data Engineer</p>
+              <p className="text-lg text-gray-800 mt-6 font-pixelify mb-2 p-2 border-2 border-game-blue">
+                {personalInfo.availability}
+              </p>
+            </div>
           
             <div className="flex flex-col sm:flex-row items-center justify-center md:justify-start gap-4 mt-8">
               <a 
@@ -135,13 +139,13 @@ const Hero = () => {
 
         <div className="order-1 md:order-2 flex justify-center md:justify-end">
           <div className="relative animate-float">
-            <div className="w-64 h-64 md:w-80 md:h-80 flex items-center justify-center rounded-md overflow-hidden">
+            <div className="w-64 h-64 md:w-80 md:h-80 flex items-center justify-center rounded-md overflow-hidden border-4 border-game-brick">
               <img 
                 src="/lovable-uploads/profile.jpg" 
                 alt="Mukesh Cheemakurthi" 
                 className="object-cover w-full h-full"
               />
-              <div className="absolute bottom-0 left-0 right-0 text-sm font-pixel text-white bg-game-blue/80 py-1 text-center">
+              <div className="absolute bottom-0 left-0 right-0 text-sm font-pixel text-white bg-game-brick py-1 text-center">
                 PLAYER-1 <Star className="inline-block ml-1" size={12} />
               </div>
             </div>
