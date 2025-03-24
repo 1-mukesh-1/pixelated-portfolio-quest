@@ -1,18 +1,12 @@
 
 import { personalInfo, socialLinks } from '@/data/portfolioData';
 import { Github, Linkedin } from 'lucide-react';
-import { useTheme } from '@/contexts/ThemeContext';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
-  const { theme } = useTheme();
   
   return (
-    <footer className={`border-t py-6 transition-colors ${
-      theme === 'galactic' 
-        ? 'bg-galactic-deep-space border-galactic-nebula-purple/30' 
-        : 'bg-game-brick border-game-mushroom-red'
-    }`}>
+    <footer className="bg-game-brick border-t-4 border-game-mushroom-red py-6">
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
         <div className="text-center">
           <div className="flex justify-center space-x-6 mb-4">
@@ -22,11 +16,7 @@ const Footer = () => {
                 href={link.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className={`transition-colors ${
-                  theme === 'galactic' 
-                    ? 'text-galactic-stardust hover:text-galactic-nebula-purple' 
-                    : 'text-white hover:text-game-gold'
-                }`}
+                className="text-white hover:text-game-gold transition-colors"
                 aria-label={link.name}
               >
                 {link.icon === 'github' ? (
@@ -38,14 +28,10 @@ const Footer = () => {
             ))}
           </div>
           
-          <p className={`text-sm mb-1 ${
-            theme === 'galactic' ? 'font-space text-galactic-stardust' : 'font-pixel text-white'
-          }`}>
+          <p className="text-sm font-pixel mb-1 text-white">
             &copy; {currentYear} {personalInfo.name}
           </p>
-          <p className={`text-xs ${
-            theme === 'galactic' ? 'text-galactic-moon-gray' : 'text-white'
-          }`}>
+          <p className="text-xs text-white">
             All Rights Reserved
           </p>
         </div>

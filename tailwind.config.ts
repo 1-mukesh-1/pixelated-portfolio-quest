@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -21,8 +22,6 @@ export default {
 			fontFamily: {
 				pixel: ['Press Start 2P', 'system-ui', 'sans-serif'],
 				pixelify: ['Pixelify Sans', 'system-ui', 'sans-serif'],
-				space: ['Space Grotesk', 'system-ui', 'sans-serif'],
-				cosmic: ['Orbitron', 'system-ui', 'sans-serif'],
 			},
 			colors: {
 				border: 'hsl(var(--border))',
@@ -68,18 +67,18 @@ export default {
 					'gold': '#FDD835',
 					'brown': '#8B4513',
 					'mushroom-red': '#FF5252',
-					'sky': '#87CEEB',
+					'sky': '#87CEEB',       // Brighter classic Mario sky color
 					'mario-red': '#E53935',
-					'brick': '#C65D31',
-					'question': '#FFD700',
-					'grass': '#77DD77',
+					'brick': '#C65D31',     // Better brick color
+					'question': '#FFD700',  // Question block gold color
+					'grass': '#77DD77',     // Brighter grass
 					'cloud': '#FFFFFF',
 					'pipe-green': '#2E8B57',
 					'toad-blue': '#1C58D9', 
 					'toad-red': '#FF0000',
 					'goomba-brown': '#A0522D',
 					'koopa-green': '#56A035',
-					'peach-pink': '#FFB7C5',
+					'peach-pink': '#FFB7C5', // Princess Peach color
 					'wario-purple': '#7B68EE',
 					'super-star': '#FFD700',
 					'luigi-green': '#3CB371',
@@ -88,26 +87,6 @@ export default {
 					'lakitu-cloud': '#FFFFFF',
 					'lava-red': '#FF4500',
 					'water-blue': '#1E90FF'
-				},
-				galactic: {
-					'space-black': '#0B0E18',
-					'deep-space': '#1A1F2C',
-					'nebula-purple': '#8B5CF6',
-					'star-yellow': '#F5D05A',
-					'cosmic-blue': '#0EA5E9',
-					'aurora-green': '#10B981',
-					'meteor-red': '#EF4444',
-					'nova-orange': '#F97316',
-					'galaxy-purple': '#8B5CF6',
-					'stardust': '#E2E8F0',
-					'comet-tail': '#60A5FA',
-					'moon-gray': '#9CA3AF',
-					'mars-red': '#DC2626',
-					'jupiter-orange': '#EA580C',
-					'saturn-amber': '#D97706',
-					'uranus-teal': '#0D9488',
-					'neptune-blue': '#1E40AF',
-					'pluto-purple': '#7E22CE',
 				},
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
@@ -212,27 +191,6 @@ export default {
 					'25%': { transform: 'translateX(10px) translateY(-5px)' },
 					'50%': { transform: 'translateX(20px) translateY(0)' },
 					'75%': { transform: 'translateX(10px) translateY(5px)' }
-				},
-				'star-twinkle': {
-					'0%, 100%': { opacity: '1', transform: 'scale(1)' },
-					'50%': { opacity: '0.5', transform: 'scale(0.8)' },
-				},
-				'space-float': {
-					'0%, 100%': { transform: 'translateY(0) rotate(0deg)' },
-					'25%': { transform: 'translateY(-5px) rotate(1deg)' },
-					'75%': { transform: 'translateY(5px) rotate(-1deg)' },
-				},
-				'cosmic-pulse': {
-					'0%, 100%': { boxShadow: '0 0 5px 2px rgba(139, 92, 246, 0.5)' },
-					'50%': { boxShadow: '0 0 15px 5px rgba(139, 92, 246, 0.8)' },
-				},
-				'orbit': {
-					'0%': { transform: 'rotate(0deg) translateX(10px) rotate(0deg)' },
-					'100%': { transform: 'rotate(360deg) translateX(10px) rotate(-360deg)' },
-				},
-				'nebula-shift': {
-					'0%': { backgroundPosition: '0% 0%' },
-					'100%': { backgroundPosition: '100% 100%' },
 				}
 			},
 			animation: {
@@ -253,25 +211,9 @@ export default {
 				'mushroom-grow': 'mushroom-grow 0.5s ease-out',
 				'block-hit': 'block-hit 0.5s ease-in-out',
 				'star-power': 'star-power 3s linear infinite',
-				'lakitu-float': 'lakitu-float 6s ease-in-out infinite',
-				'star-twinkle': 'star-twinkle 3s ease-in-out infinite',
-				'space-float': 'space-float 5s ease-in-out infinite',
-				'cosmic-pulse': 'cosmic-pulse 4s ease-in-out infinite',
-				'orbit': 'orbit 20s linear infinite',
-				'nebula-shift': 'nebula-shift 15s ease-in-out infinite alternate',
-			},
-			backgroundImage: {
-				'galaxy-gradient': 'linear-gradient(to bottom, #0B0E18, #1A1F2C)',
-				'nebula': 'linear-gradient(45deg, rgba(139, 92, 246, 0.3), rgba(14, 165, 233, 0.3))',
-				'star-field': 'radial-gradient(circle, rgba(255,255,255,0.1) 1px, transparent 1px)',
-				'cosmic-grid': 'linear-gradient(rgba(139, 92, 246, 0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(139, 92, 246, 0.1) 1px, transparent 1px)',
-			},
-			boxShadow: {
-				'cosmic': '0 0 10px 2px rgba(139, 92, 246, 0.5)',
-				'galaxy': '0 0 20px rgba(14, 165, 233, 0.7)',
-			},
+				'lakitu-float': 'lakitu-float 6s ease-in-out infinite'
+			}
 		}
 	},
 	plugins: [require("tailwindcss-animate")],
 } satisfies Config;
-
