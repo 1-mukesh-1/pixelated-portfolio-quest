@@ -1,4 +1,3 @@
-
 import type { Config } from "tailwindcss";
 
 export default {
@@ -22,6 +21,8 @@ export default {
 			fontFamily: {
 				pixel: ['Press Start 2P', 'system-ui', 'sans-serif'],
 				pixelify: ['Pixelify Sans', 'system-ui', 'sans-serif'],
+				space: ['Space Grotesk', 'system-ui', 'sans-serif'],
+				cosmic: ['Orbitron', 'system-ui', 'sans-serif'],
 			},
 			colors: {
 				border: 'hsl(var(--border))',
@@ -67,18 +68,18 @@ export default {
 					'gold': '#FDD835',
 					'brown': '#8B4513',
 					'mushroom-red': '#FF5252',
-					'sky': '#87CEEB',       // Brighter classic Mario sky color
+					'sky': '#87CEEB',
 					'mario-red': '#E53935',
-					'brick': '#C65D31',     // Better brick color
-					'question': '#FFD700',  // Question block gold color
-					'grass': '#77DD77',     // Brighter grass
+					'brick': '#C65D31',
+					'question': '#FFD700',
+					'grass': '#77DD77',
 					'cloud': '#FFFFFF',
 					'pipe-green': '#2E8B57',
 					'toad-blue': '#1C58D9', 
 					'toad-red': '#FF0000',
 					'goomba-brown': '#A0522D',
 					'koopa-green': '#56A035',
-					'peach-pink': '#FFB7C5', // Princess Peach color
+					'peach-pink': '#FFB7C5',
 					'wario-purple': '#7B68EE',
 					'super-star': '#FFD700',
 					'luigi-green': '#3CB371',
@@ -87,6 +88,20 @@ export default {
 					'lakitu-cloud': '#FFFFFF',
 					'lava-red': '#FF4500',
 					'water-blue': '#1E90FF'
+				},
+				galactic: {
+					'space-black': '#0B0E18',
+					'deep-space': '#1A1F2C',
+					'nebula-purple': '#8B5CF6',
+					'cosmic-blue': '#0EA5E9',
+					'star-yellow': '#F5D05A',
+					'stardust': '#E2E8F0',
+					'comet-tail': '#4338CA',
+					'galaxy-pink': '#EC4899',
+					'meteor-red': '#EF4444',
+					'planet-green': '#10B981',
+					'aurora-teal': '#14B8A6',
+					'void-gray': '#4B5563',
 				},
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
@@ -98,6 +113,12 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				}
+			},
+			boxShadow: {
+				'cosmic': '0 4px 20px rgba(139, 92, 246, 0.25)',
+				'galaxy': '0 8px 32px rgba(139, 92, 246, 0.35)',
+				'nebula': '0 0 15px rgba(139, 92, 246, 0.5)',
+				'starlight': '0 0 10px rgba(245, 208, 90, 0.8)',
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
