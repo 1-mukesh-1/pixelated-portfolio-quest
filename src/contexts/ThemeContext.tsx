@@ -1,17 +1,11 @@
 
 import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react';
-
-type Theme = 'galactic' | 'mario';
-
-interface ThemeContextType {
-  theme: Theme;
-  toggleTheme: () => void;
-}
+import { Theme, ThemeContextType } from '@/types/theme';
 
 const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
 
 export const ThemeProvider = ({ children }: { children: ReactNode }) => {
-  const [theme, setTheme] = useState<Theme>('galactic');
+  const [theme, setTheme] = useState<Theme>('galactic'); // Default to galactic theme
 
   useEffect(() => {
     // Apply theme to the document
@@ -23,7 +17,7 @@ export const ThemeProvider = ({ children }: { children: ReactNode }) => {
   };
 
   return (
-    <ThemeContext.Provider value={{ theme, toggleTheme }}>
+    <ThemeContext.Provider value={{ theme, toggleTheme, setTheme }}>
       {children}
     </ThemeContext.Provider>
   );

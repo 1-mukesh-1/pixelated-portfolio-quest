@@ -26,7 +26,6 @@ const MainLayout: React.FC<MainLayoutProps> = ({ children }) => {
       observer.observe(section);
     });
 
-    // Removed the distracting side-to-side animations when scrolling
     // Simple sound effects on specific scroll percentages are kept
     const handleScroll = () => {
       const scrollY = window.scrollY;
