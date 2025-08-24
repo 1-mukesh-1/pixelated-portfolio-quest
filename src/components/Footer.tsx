@@ -1,18 +1,12 @@
 
 import { personalInfo, socialLinks } from '@/data/portfolioData';
 import { Github, Linkedin } from 'lucide-react';
-import { useTheme } from '@/contexts/ThemeContext';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
-  const { theme } = useTheme();
   
   return (
-    <footer className={`${
-      theme === 'mario' 
-        ? 'bg-game-brick border-t-4 border-game-mushroom-red' 
-        : 'bg-galactic-space-black border-t border-galactic-nebula-purple'
-    } py-6`}>
+    <footer className="bg-accent/40 border-t-4 border-white py-6">
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
         <div className="text-center">
           <div className="flex justify-center space-x-6 mb-4">
@@ -22,11 +16,7 @@ const Footer = () => {
                 href={link.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className={`${
-                  theme === 'mario' 
-                    ? 'text-white hover:text-game-gold' 
-                    : 'text-galactic-stardust hover:text-galactic-star-yellow'
-                } transition-colors`}
+                className="text-white hover:text-game-blue transition-colors"
                 aria-label={link.name}
               >
                 {link.icon === 'github' ? (
@@ -38,14 +28,10 @@ const Footer = () => {
             ))}
           </div>
           
-          <p className={`text-sm mb-1 ${
-            theme === 'mario' ? 'font-pixel text-white' : 'font-cosmic text-galactic-stardust'
-          }`}>
+          <p className="text-sm font-pixel mb-1">
             &copy; {currentYear} {personalInfo.name}
           </p>
-          <p className={`text-xs ${
-            theme === 'mario' ? 'text-white' : 'text-galactic-stardust/70'
-          }`}>
+          <p className="text-xs text-gray-400">
             All Rights Reserved
           </p>
         </div>

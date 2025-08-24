@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -21,8 +22,6 @@ export default {
 			fontFamily: {
 				pixel: ['Press Start 2P', 'system-ui', 'sans-serif'],
 				pixelify: ['Pixelify Sans', 'system-ui', 'sans-serif'],
-				space: ['Space Grotesk', 'system-ui', 'sans-serif'],
-				cosmic: ['Orbitron', 'system-ui', 'sans-serif'],
 			},
 			colors: {
 				border: 'hsl(var(--border))',
@@ -59,49 +58,13 @@ export default {
 					foreground: 'hsl(var(--card-foreground))'
 				},
 				game: {
-					'dark-blue': '#1E88E5',
-					'blue': '#2196F3',
-					'light-blue': '#81D4FA',
-					'green': '#4CAF50',
-					'red': '#F44336',
-					'yellow': '#FFEB3B',
-					'gold': '#FDD835',
-					'brown': '#8B4513',
-					'mushroom-red': '#FF5252',
-					'sky': '#87CEEB',
-					'mario-red': '#E53935',
-					'brick': '#C65D31',
-					'question': '#FFD700',
-					'grass': '#77DD77',
-					'cloud': '#FFFFFF',
-					'pipe-green': '#2E8B57',
-					'toad-blue': '#1C58D9', 
-					'toad-red': '#FF0000',
-					'goomba-brown': '#A0522D',
-					'koopa-green': '#56A035',
-					'peach-pink': '#FFB7C5',
-					'wario-purple': '#7B68EE',
-					'super-star': '#FFD700',
-					'luigi-green': '#3CB371',
-					'bowser-yellow': '#FFA500',
-					'bullet-bill-black': '#333333',
-					'lakitu-cloud': '#FFFFFF',
-					'lava-red': '#FF4500',
-					'water-blue': '#1E90FF'
-				},
-				galactic: {
-					'space-black': '#0B0E18',
-					'deep-space': '#1A1F2C',
-					'nebula-purple': '#8B5CF6',
-					'cosmic-blue': '#0EA5E9',
-					'star-yellow': '#F5D05A',
-					'stardust': '#E2E8F0',
-					'comet-tail': '#4338CA',
-					'galaxy-pink': '#EC4899',
-					'meteor-red': '#EF4444',
-					'planet-green': '#10B981',
-					'aurora-teal': '#14B8A6',
-					'void-gray': '#4B5563',
+					'dark-blue': '#0f172a',
+					'blue': '#38bdf8',
+					'green': '#4ade80',
+					'red': '#f87171',
+					'yellow': '#facc15',
+					'purple': '#a855f7',
+					'pink': '#ec4899',
 				},
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
@@ -113,12 +76,6 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				}
-			},
-			boxShadow: {
-				'cosmic': '0 4px 20px rgba(139, 92, 246, 0.25)',
-				'galaxy': '0 8px 32px rgba(139, 92, 246, 0.35)',
-				'nebula': '0 0 15px rgba(139, 92, 246, 0.5)',
-				'starlight': '0 0 10px rgba(245, 208, 90, 0.8)',
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -140,7 +97,7 @@ export default {
 				},
 				float: {
 					'0%, 100%': { transform: 'translateY(0)' },
-					'50%': { transform: 'translateY(-10px)' }
+					'50%': { transform: 'translateY(-5px)' }
 				},
 				pulse: {
 					'0%, 100%': { opacity: '1' },
@@ -158,11 +115,11 @@ export default {
 					'100%': { transform: 'rotate(360deg)' }
 				},
 				'slide-up': {
-					'0%': { transform: 'translateY(20px)', opacity: '0' },
+					'0%': { transform: 'translateY(10px)', opacity: '0' },
 					'100%': { transform: 'translateY(0)', opacity: '1' }
 				},
 				'slide-down': {
-					'0%': { transform: 'translateY(-20px)', opacity: '0' },
+					'0%': { transform: 'translateY(-10px)', opacity: '0' },
 					'100%': { transform: 'translateY(0)', opacity: '1' }
 				},
 				'slide-in-right': {
@@ -173,45 +130,6 @@ export default {
 					'0%': { opacity: '0', transform: 'scale(0.95)' },
 					'50%': { opacity: '0.5', transform: 'scale(0.97)' },
 					'100%': { opacity: '1', transform: 'scale(1)' }
-				},
-				'coin-flip': {
-					'0%': { transform: 'rotateY(0deg)' },
-					'100%': { transform: 'rotateY(180deg)' }
-				},
-				'question-block': {
-					'0%, 100%': { transform: 'translateY(0)' },
-					'50%': { transform: 'translateY(-10px)' }
-				},
-				'bob-vertical': {
-					'0%, 100%': { transform: 'translateY(0)' },
-					'50%': { transform: 'translateY(-15px) scale(1.05)' }
-				},
-				'pipe-appear': {
-					'0%': { transform: 'translateY(100%)' },
-					'100%': { transform: 'translateY(0)' }
-				},
-				'mushroom-grow': {
-					'0%': { transform: 'scale(0)' },
-					'100%': { transform: 'scale(1)' }
-				},
-				'block-hit': {
-					'0%, 100%': { transform: 'translateY(0)' },
-					'25%': { transform: 'translateY(-10px) rotate(-3deg)' },
-					'50%': { transform: 'translateY(0) rotate(0deg)' },
-					'75%': { transform: 'translateY(-5px) rotate(3deg)' }
-				},
-				'star-power': {
-					'0%': { transform: 'scale(1)', filter: 'hue-rotate(0deg)' },
-					'25%': { transform: 'scale(1.1)', filter: 'hue-rotate(90deg)' },
-					'50%': { transform: 'scale(1)', filter: 'hue-rotate(180deg)' },
-					'75%': { transform: 'scale(1.1)', filter: 'hue-rotate(270deg)' },
-					'100%': { transform: 'scale(1)', filter: 'hue-rotate(360deg)' }
-				},
-				'lakitu-float': {
-					'0%, 100%': { transform: 'translateX(0) translateY(0)' },
-					'25%': { transform: 'translateX(10px) translateY(-5px)' },
-					'50%': { transform: 'translateX(20px) translateY(0)' },
-					'75%': { transform: 'translateX(10px) translateY(5px)' }
 				}
 			},
 			animation: {
@@ -221,18 +139,10 @@ export default {
 				'float': 'float 3s ease-in-out infinite',
 				'pulse': 'pulse 2s ease-in-out infinite',
 				'pixel-spin': 'pixel-spin 1s steps(8) infinite',
-				'slide-up': 'slide-up 0.5s ease-out',
-				'slide-down': 'slide-down 0.5s ease-out',
-				'slide-in-right': 'slide-in-right 0.5s ease-out',
-				'pixel-fade-in': 'pixel-fade-in 0.3s ease-out',
-				'coin-flip': 'coin-flip 0.6s ease-in-out infinite',
-				'question-block': 'question-block 1s ease-in-out',
-				'bob-vertical': 'bob-vertical 2s ease-in-out infinite',
-				'pipe-appear': 'pipe-appear 1s ease-out',
-				'mushroom-grow': 'mushroom-grow 0.5s ease-out',
-				'block-hit': 'block-hit 0.5s ease-in-out',
-				'star-power': 'star-power 3s linear infinite',
-				'lakitu-float': 'lakitu-float 6s ease-in-out infinite'
+				'slide-up': 'slide-up 0.3s ease-out',
+				'slide-down': 'slide-down 0.3s ease-out',
+				'slide-in-right': 'slide-in-right 0.3s ease-out',
+				'pixel-fade-in': 'pixel-fade-in 0.3s ease-out'
 			}
 		}
 	},

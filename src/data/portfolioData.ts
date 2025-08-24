@@ -58,16 +58,9 @@ export const workExperience = [
     location: "Bengaluru, KA, India",
     period: "July 2022 – Aug 2024",
     description: [
-      "Developed real-time Object Oriented ETL pipelines processing 1TB+ data using Apache Spark and Kafka",
-      "Built CI/CD pipelines with Jenkins, Docker and GitHub, automating pipeline deployment on Azure",
-      "Configured Terraform and Kubernetes to set up infrastructure for scalable data pipeline execution",
-      "Built a fault-tolerant metadata search tool using Apache Solr for operational analytics",
-      "Integrated 5+ Order Management components and migrated 50+ tables from Oracle to DataLake",
-      "Worked in an Agile environment, actively participating in sprint planning, daily stand-ups, and retrospectives",
+      "Developed real-time and large-scale ETL pipelines processing 1TB+ data using Apache Spark and Kafka",
       "Enhanced Cloud parameters reducing pipeline runtime from 8 hours to 1 hour, cutting cloud costs",
-      "Worked with Ubuntu, networking tools, and cryptography to ensure secure and resilient deployments",
-      "Implemented cloud security with IAM roles and AD Groups, ensuring secure access control in AWS/GCP",
-      "Developed custom parsers using Scrapy to extract data from HTML, XML, JSON for analytics workflows"
+      "Integrated 5+ Order Management components and migrated 50+ Data Models from IBM Sterling to GCP"
     ]
   },
   {
@@ -78,9 +71,7 @@ export const workExperience = [
     description: [
       "Performed Time-Series analysis to forecast demand patterns, detect seasonality to improve pricing strategy",
       "Utilized XGBoost to predict elasticity coefficients and applied Linear Optimization for demand modelling",
-      "Accelerated system components by implementing DFS algorithm, reducing processing time by 99%",
-      "Worked extensively with unstructured data such as images, text and speech to extract insights",
-      "Utilized NumPy and Pandas for data cleaning, transformation, and analysis during model building"
+      "Accelerated system components by implementing DFS algorithm, reducing processing time by 99%"
     ]
   }
 ];
@@ -146,77 +137,8 @@ export const projects: ProjectType[] = [
       "Incorporated geometric algorithms to improve accuracy from 33% to 80% versus baseline models",
       "Integrated MediaPipe pose detection and PyTorch CNN to enable real-time size recommendations"
     ]
-  },
-  {
-    title: "Image Handler (Course Project - Design Paradigms)",
-    description: "Built Image Processing App with 15+ operations (ex: Compression, colour conversion, etc) in Java",
-    technologies: ["Java", "Intellij", "Junit"],
-    githubLink: "https://github.com/1-mukesh-1/imageHandler",
-    highlights: [
-      "Built Image Processing App with 15+ operations (ex: Compression, colour conversion, etc) in Java",
-      "Incorporated MVC, Command Design, Callbacks, Observer patterns to ensure security, maintainability",
-      "Wrote 1000+ tests for MVC architecture validating cross-component integrity and data flow reliability"
-    ]
-  },
-  {
-    title: "Medical Chat-Bot (Hackathon Team Project)",
-    description: "Orchestrated a scalable medical chatbot processing 5+ queries/sec, supporting 10+ concurrent users",
-    technologies: ["React", "Flask", "Google BERT", "Elastic Search"],
-    githubLink: "https://github.com/Akshith213/HackOffV3---Team-DrainBrain",
-    highlights: [
-      "Orchestrated a scalable medical chatbot processing 5+ queries/sec, supporting 10+ concurrent users",
-      "Medical Data is scraped using scrapy and regex from Mayo Clinic Website following the terms-of-use"
-    ]
-  },
-  {
-    title: "Nested Avro Schema to HiveQL Schema Converter",
-    description: "Designed a web app using the BFS algorithm to auto-generate HiveQL schema from Avro or JSON data using robust design paradigms such as MVC, Command Design Patterns to ensure maintainability",
-    technologies: ["Graph Traversal", "Spark-SQL"],
-    highlights: [
-      "Designed a web app using the BFS algorithm to auto-generate HiveQL schema from Avro or JSON data using robust design paradigms such as MVC, Command Design Patterns to ensure maintainability",
-      "Reduced manual schema creation time for complex schemas from over 1 hour to less than a Minute"
-    ]
-  },
-  {
-    title: "Custom UEFI BIOS Development for Enhanced Hardware Initialization",
-    description: "Developed a custom UEFI BIOS to optimize hardware initialization and boot performance.",
-    technologies: ["C", "x86"],
-    highlights: [
-      "Developed a custom UEFI BIOS to optimize hardware initialization and boot performance.",
-      "Implemented low-level drivers for peripherals, ensuring seamless hardware-software integration",
-      "Conducted in-depth debugging using hardware tools to resolve firmware-hardware interaction issues"
-    ]
-  },
-  {
-    title: "Active Noise Cancellation for Vehicles",
-    description: "Designed an ANC system using MATLAB & Simulink for vehicle interiors",
-    technologies: ["MATLAB", "Simulink", "Signal Processing"],
-    highlights: [
-      "Designed an ANC system using MATLAB & Simulink for vehicle interiors",
-      "Implemented adaptive filtering (LMS algorithm) to reduce engine and road noise by 30%",
-      "Simulated real-time audio signal processing and feedback control loops for noise suppression"
-    ]
-  },
-  {
-    title: "Real-Time Sensor Data Acquisition System",
-    description: "Developed a real-time data acquisition system using ThreadX RTOS for precise sensor monitoring.",
-    technologies: ["C", "RTOS", "Embedded Systems"],
-    highlights: [
-      "Developed a real-time data acquisition system using ThreadX RTOS for precise sensor monitoring.",
-      "Integrated multiple sensors to collect environmental data, ensuring accurate and synchronized readings"
-    ]
-  },
-  {
-    title: "Microservices Test Automation Framework (Personal Project)",
-    description: "Built test framework with unit, integration, and E2E tests using Git and Jenkins CI/CD pipelines",
-    technologies: ["Java", "PostgreSQL", "gRPC"],
-    highlights: [
-      "Built test framework with unit, integration, and E2E tests using Git and Jenkins CI/CD pipelines",
-      "Created observability dashboards with power BI for real-time monitoring of test execution health"
-    ]
   }
 ];
-
 
 export const socialLinks: SocialLinkType[] = [
   {
